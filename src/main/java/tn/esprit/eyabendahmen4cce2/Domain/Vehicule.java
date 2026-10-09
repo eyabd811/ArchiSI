@@ -31,13 +31,6 @@ public class Vehicule {
     @JoinColumn(name = "agence_id")
     Agence agence;
 
-    @ManyToMany
-    @JoinTable(
-            name = "vehicule_equipement",
-            joinColumns = @JoinColumn(name = "vehicule_id"),
-            inverseJoinColumns = @JoinColumn(name = "equipement_id")
-    )
-    @Builder.Default
-    @ToString.Exclude
-    List<Equipement> equipements = new ArrayList<>();
+
+
 }

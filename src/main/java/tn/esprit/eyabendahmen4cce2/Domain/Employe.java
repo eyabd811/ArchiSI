@@ -24,7 +24,5 @@ public class Employe {
 
     @Enumerated(value = EnumType.STRING)
     RoleEmploye role;
-    @ManyToOne
-    @JoinColumn(name = "agence_id")
-    Agence agence;
+
 }

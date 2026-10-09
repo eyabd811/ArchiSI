@@ -30,7 +30,5 @@ public class Reservation {
     @JoinColumn(name = "vehicule_id")
     Vehicule vehicule;
 
-    @ManyToOne
-    @JoinColumn(name = "client_id")
-    Client client;
+
 }
