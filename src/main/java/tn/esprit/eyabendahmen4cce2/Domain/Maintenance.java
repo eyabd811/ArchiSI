@@ -19,10 +19,10 @@ public class Maintenance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long idMaintenance;
-
     LocalDate dateDebut;
-
     LocalDate dateFin;
-
     String description;
+    @ManyToOne
+    Vehicule vehicule;
+
 }

@@ -6,6 +6,8 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.math.BigDecimal;
+import java.util.Set;
+
 @Entity
 @Getter
 @Setter
@@ -28,9 +30,12 @@ public class Vehicule {
      BigDecimal tarifJournalier;
 
     @ManyToOne
-    @JoinColumn(name = "agence_id")
     Agence agence;
+    @ManyToMany
+    Set<Equipement> equipements;
 
+    @OneToMany(mappedBy = "vehicule")
+    Set<Reservation> reservation;
 
 
 }

@@ -27,8 +27,11 @@ public class Reservation {
     @Enumerated(value = EnumType.STRING)
     StatutReservation statut;
     @ManyToOne
-    @JoinColumn(name = "vehicule_id")
     Vehicule vehicule;
 
+    @ManyToOne
+    Client client;
+    @OneToOne
+    Contrat contrat;
 
 }
